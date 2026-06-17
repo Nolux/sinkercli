@@ -4,7 +4,7 @@ version = "0.1.0"
 edition = "2024"
 description = "TUI for managing Linux audio routing — loopbacks, virtual sinks, and presets"
 license = "MIT"
-repository = "https://github.com/atle-selbek/sinkercli"
+repository = "https://github.com/Nolux/sinkercli"
 
 [profile.release]
 strip = true
