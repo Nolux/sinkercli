@@ -1,0 +1,22 @@
+[package]
+name = "sinkercli"
+version = "0.1.0"
+edition = "2024"
+description = "TUI for managing Linux audio routing — loopbacks, virtual sinks, and presets"
+license = "MIT"
+repository = "https://github.com/atle-selbek/sinkercli"
+
+[profile.release]
+strip = true
+opt-level = 3
+lto = true
+codegen-units = 1
+
+[dependencies]
+ratatui          = "0.29"
+crossterm        = "0.28"
+libpulse-binding = "2"
+serde            = { version = "1", features = ["derive"] }
+toml             = "0.8"
+anyhow           = "1"
+dirs             = "5"

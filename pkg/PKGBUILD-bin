@@ -1,0 +1,18 @@
+# Maintainer: Atle Selbek <atle.selbek@gmail.com>
+pkgname=sinkercli-bin
+pkgver=0.1.0
+pkgrel=1
+pkgdesc="TUI for managing Linux audio routing — loopbacks, virtual sinks, and presets"
+arch=('x86_64')
+url="https://github.com/atle-selbek/sinkercli"
+license=('MIT')
+provides=('sinkercli')
+conflicts=('sinkercli' 'sinkercli-git')
+depends=('libpulse')
+
+source_x86_64=("sinkercli-${pkgver}-x86_64.tar.gz::https://github.com/atle-selbek/sinkercli/releases/download/v${pkgver}/sinkercli-x86_64-unknown-linux-gnu.tar.gz")
+sha256sums_x86_64=('SKIP')  # update with: sha256sum sinkercli-x86_64-unknown-linux-gnu.tar.gz
+
+package() {
+    install -Dm755 sinkercli "${pkgdir}/usr/bin/sinkercli"
+}
